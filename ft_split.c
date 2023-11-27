@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:28:05 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/12 22:11:43 by yiliu            ###   ########.fr       */
+/*   Updated: 2023/11/27 23:34:22 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ char    *ft_strndup(char const *s, size_t n)
     return (result);
 }
 
-void    ft_freearray(char **s, szie_t n)
+void    ft_freearray(char **s, size_t n)
 {
     while (n-- > 0)
         free (s[n]);
@@ -129,11 +129,11 @@ char	**ft_split(char const *s, char c)
         if (!(result[i] = ft_strndup(s, wordlen)))
         {
             ft_freearray(result, i - 1);
-            reutrn (0);
+            return (0);
         }
         s += wordlen;
         i++;
     }
-    result[i] = '\0';
+    result[i] = NULL;
     return (result);
 }

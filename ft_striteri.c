@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 19:45:22 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/10 15:59:44 by yiliu            ###   ########.fr       */
+/*   Created: 2023/11/26 22:12:16 by yidiliu           #+#    #+#             */
+/*   Updated: 2023/11/26 22:43:22 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
-
-typedef struct
+void    ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+    size_t  len;
 
-};
-
-#endif
+    len = ft_strlen(s);
+    while (len-- > 0)
+        f(len, &s[len]);
+}

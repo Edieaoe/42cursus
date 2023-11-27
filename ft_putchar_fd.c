@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 15:48:38 by yiliu             #+#    #+#             */
-/*   Updated: 2023/09/22 20:13:42 by yiliu            ###   ########.fr       */
+/*   Created: 2023/11/26 22:50:13 by yidiliu           #+#    #+#             */
+/*   Updated: 2023/11/27 12:05:11 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void ft_putchar_fd(char c, int fd)
 {
-	if (c >= 65 && c <= 90 || c >= 97 && c <= 122)
-		return (1);
-	return (0);
+    write(fd, &c, 1);
 }
