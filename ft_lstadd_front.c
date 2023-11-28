@@ -6,13 +6,13 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 20:12:32 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/27 20:13:01 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/28 01:22:47 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    
+	
 }

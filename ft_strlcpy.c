@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 21:07:23 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/11 19:36:32 by yiliu            ###   ########.fr       */
+/*   Updated: 2023/11/29 01:08:59 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		ft_memcpy(dst, src, dstsize - 1);
 		dst[dstsize - 1] = '\0';
 	}
+	printf("%s\n", dst);
 	return (srclen);
+}
+
+int main()
+{
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
+
+	printf("%zu\n", ft_strlcpy(dest, src, 0));
 }
