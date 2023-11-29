@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:28:05 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/28 02:02:16 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/29 16:20:17 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ void	ft_write_words(char const *s, char c, char **result, size_t i)
 {
 	size_t	wordlen;
 
-	while (*s && *s == c)
-		s++;
 	wordlen = ft_wordlen(s, c);
 	result[i] = ft_strndup(s, wordlen);
 	if (!(result[i]))
@@ -72,7 +70,6 @@ void	ft_write_words(char const *s, char c, char **result, size_t i)
 			free(result[i]);
 		free(result);
 	}
-	s += wordlen;
 }
 
 char	**ft_split(char const *s, char c)
@@ -80,6 +77,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	words;
 	size_t	i;
+	size_t	wordlen;
 
 	words = ft_countwords(s, c);
 	result = (char **)malloc((words + 1) * sizeof(char *));
@@ -88,7 +86,11 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < words)
 	{
+		while (*s && *s == c)
+			s++;
+		wordlen = ft_wordlen(s, c);
 		ft_write_words(s, c, result, i);
+		s += wordlen;
 		i++;
 	}
 	result[i] = NULL;
@@ -101,7 +103,7 @@ char	**ft_split(char const *s, char c)
 // 	int		i;
 
 // 	i = 0;
-// 	result = ft_split("i am so happy", ' ');
+// 	result = ft_split("     i am so happy    ", ' ');
 // 	while (result[i])
 // 		printf("%s\n", result[i++]);
 // }

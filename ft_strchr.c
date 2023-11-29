@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 22:04:04 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/27 23:46:26 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/29 17:01:25 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	while (*s != (unsigned char)c)
 	{
 		if (*s == '\0')
 			return (0);
@@ -22,3 +22,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+
+// int main()
+// {
+// 	char s[] = "tripouille";
+
+// 	ft_strchr(s, 't' + 256);
+// }

@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 12:12:03 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/28 01:23:54 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/29 15:33:02 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_putnbr_fd(int n, int fd)
 	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		num = -n;
+		num = -num;
 	}
-	if (n > 9)
+	if (num > 9)
 		ft_putnbr_fd(num / 10, fd);
 	ft_putchar_fd(num % 10 + '0', fd);
 }

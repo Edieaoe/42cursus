@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:45:22 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/28 02:14:38 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/29 18:19:30 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
+# include <limits.h>
 
 typedef struct s_list
 {
