@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 12:06:46 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/30 19:28:23 by yidiliu          ###   ########.fr       */
+/*   Created: 2023/11/29 20:00:35 by yidiliu           #+#    #+#             */
+/*   Updated: 2023/11/29 20:01:15 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	len;
 
-	if (!s)
-		return ;
-	len = ft_strlen(s);
-	write(fd, s, len);
 }

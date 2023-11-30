@@ -7,18 +7,18 @@ SRCS_m	= ft_isdigit.c ft_memset.c ft_striteri.c ft_strrchr.c\
 		ft_isalnum.c ft_memcmp.c ft_split.c ft_strmapi.c\
 		ft_isalpha.c ft_memcpy.c ft_strchr.c ft_strncmp.c\
 		ft_isascii.c  ft_memmove.c ft_strdup.c ft_strnstr.c
-SRCS_b	= 
+SRCS_b	=
 OBJS_m	= $(SRCS_m:%.c=%.o)
 OBJS_b	= $(SRCS_b:%.c=%.o)
 CC		= cc -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+$(NAME): $(OBJS_m)
+	ar -rc $(NAME) $(OBJS_m)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS_m)
 
 fclean: clean
 	rm -rf $(NAME)

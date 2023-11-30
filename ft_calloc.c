@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 22:48:34 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/29 18:42:33 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/29 22:42:57 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(result, count * size);
 	return (result);
 }
+
+// #include <libc.h>
+// __attribute__((destructor))
+// static void	destructor(void)
+// {
+// 	system("leaks -q a.out");
+// }
 
 // int main()
 // {

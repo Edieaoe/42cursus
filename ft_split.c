@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:28:05 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/29 16:20:17 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/30 19:24:21 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	wordlen;
 
+	if (!s)
+		return (NULL);
 	words = ft_countwords(s, c);
 	result = (char **)malloc((words + 1) * sizeof(char *));
 	if (!result)

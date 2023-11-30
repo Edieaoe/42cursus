@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:05:00 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/28 01:25:12 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/30 19:25:03 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int, char))
 	char			*result;
 	size_t			len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
