@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:59:16 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/29 20:01:56 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/01 01:03:58 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*tmp;
 
+	while(*lst)
+	{
+		tmp = (*lst)->next;
+		
+	}
 }

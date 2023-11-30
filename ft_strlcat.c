@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 21:38:17 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/30 23:13:59 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/01 01:10:11 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dstlen;
 	size_t	srclen;
 
-	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
+	if (dstsize == 0)
+		return (srclen);
+	dstlen = ft_strlen(dst);
 	if (dstlen >= dstsize)
 		return (srclen + dstsize);
 	if (srclen < dstsize - dstlen)

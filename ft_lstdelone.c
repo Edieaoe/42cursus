@@ -6,7 +6,7 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:58:37 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/29 20:02:17 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/01 00:58:21 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-
+	del(lst->content);
+	free(lst);
 }
