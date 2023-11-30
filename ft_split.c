@@ -6,13 +6,13 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:28:05 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/30 19:24:21 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/30 22:55:00 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countwords(char const *s, char c)
+static size_t	ft_countwords(char const *s, char c)
 {
 	size_t	count;
 
@@ -30,7 +30,7 @@ size_t	ft_countwords(char const *s, char c)
 	return (count);
 }
 
-size_t	ft_wordlen(char const *s, char c)
+static size_t	ft_wordlen(char const *s, char c)
 {
 	size_t	len;
 
@@ -40,7 +40,7 @@ size_t	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
-char	*ft_strndup(char const *s, size_t n)
+static char	*ft_strndup(char const *s, size_t n)
 {
 	char	*result;
 	size_t	i;
@@ -58,7 +58,7 @@ char	*ft_strndup(char const *s, size_t n)
 	return (result);
 }
 
-void	ft_write_words(char const *s, char c, char **result, size_t i)
+static void	ft_write_words(char const *s, char c, char **result, size_t i)
 {
 	size_t	wordlen;
 

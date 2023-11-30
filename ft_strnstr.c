@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 22:48:34 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/12 16:47:15 by yiliu            ###   ########.fr       */
+/*   Updated: 2023/11/30 23:09:36 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (*needle == '\0')
 		return ((char *)haystack);
+	if (len == 0)
+		return (0);
 	nlen = ft_strlen(needle);
 	while (*haystack && len-- >= nlen)
 	{

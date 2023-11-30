@@ -6,13 +6,13 @@
 /*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 13:35:24 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/28 01:22:35 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/11/30 22:54:03 by yidiliu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_digits(int n)
+static size_t	count_digits(int n)
 {
 	long int	num;
 	size_t		count;
