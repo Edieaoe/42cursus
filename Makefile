@@ -7,18 +7,29 @@ SRCS_m	= ft_isdigit.c ft_memset.c ft_striteri.c ft_strrchr.c\
 		ft_isalnum.c ft_memcmp.c ft_split.c ft_strmapi.c\
 		ft_isalpha.c ft_memcpy.c ft_strchr.c ft_strncmp.c\
 		ft_isascii.c  ft_memmove.c ft_strdup.c ft_strnstr.c
-SRCS_b	=
+SRCS_b	= ft_lstlast.c ft_lstmap.c ft_lstnew.c\
+		ft_lstadd_back.c ft_lstsize.c ft_lstadd_front.c\
+		ft_lstclear.c ft_lstdelone.c ft_lstiter.c
 OBJS_m	= $(SRCS_m:%.c=%.o)
 OBJS_b	= $(SRCS_b:%.c=%.o)
 CC		= cc -Wall -Wextra -Werror
+flag = 0
+
+ifeq (flag, 1)
+OBJS_m += OBJS_b
+endif
 
 all: $(NAME)
 
 $(NAME): $(OBJS_m)
-	ar -rc $(NAME) $(OBJS_m)
+	ar -rc $@ $^
+
+bonus: $(OBJS_m) $(OBJS_b)
+	flag = 1
+	ar -rc $(NAME) $^
 
 clean:
-	rm -rf $(OBJS_m)
+	rm -rf $(OBJS_m) $(OBJS_b)
 
 fclean: clean
 	rm -rf $(NAME)
