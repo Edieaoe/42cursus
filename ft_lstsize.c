@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:42:01 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/12/01 00:54:25 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/16 22:48:19 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ int	ft_lstsize(t_list *lst)
 {
 	int	count;
 
-	count = 0;
+	if (!lst)
+		return (0);
+	count = 1;
 	while (lst->next)
 	{
 		count++;

@@ -13,20 +13,19 @@ SRCS_b	= ft_lstlast.c ft_lstmap.c ft_lstnew.c\
 OBJS_m	= $(SRCS_m:%.c=%.o)
 OBJS_b	= $(SRCS_b:%.c=%.o)
 CC		= cc -Wall -Wextra -Werror
-flag = 0
-
-ifeq (flag, 1)
-OBJS_m += OBJS_b
-endif
 
 all: $(NAME)
 
+ifeq ($(flag), 1)
+$(NAME): $(OBJS_m) $(OBJS_b)
+	ar -rc $(NAME) $(OBJS_m) $(OBJS_b)
+else
 $(NAME): $(OBJS_m)
-	ar -rc $@ $^
+	ar -rc $(NAME) $(OBJS_m)
+endif
 
 bonus: $(OBJS_m) $(OBJS_b)
-	flag = 1
-	ar -rc $(NAME) $^
+	@make flag=1
 
 clean:
 	rm -rf $(OBJS_m) $(OBJS_b)
