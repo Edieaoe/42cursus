@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 17:05:00 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/11/30 19:25:03 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/19 17:55:08 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int, char))
 	char			*result;
 	size_t			len;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
 	result = (char *)malloc((len + 1) * sizeof(char));

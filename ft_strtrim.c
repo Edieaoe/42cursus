@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:55:37 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/30 19:21:26 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/19 17:53:02 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 	size_t	len;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	while (*s1 && ft_strchr(set, *s1) != 0)
 		s1++;
