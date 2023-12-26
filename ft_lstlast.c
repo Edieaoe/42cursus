@@ -6,7 +6,7 @@
 /*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 19:42:05 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/12/16 22:48:52 by yiliu            ###   ########.fr       */
+/*   Updated: 2023/12/26 15:44:23 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (0);
+		return (NULL);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

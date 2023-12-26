@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 22:04:04 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/29 17:01:25 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/26 15:46:36 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s != (unsigned char)c)
 	{
 		if (*s == '\0')
-			return (0);
+			return (NULL);
 		s++;
 	}
 	return ((char *)s);

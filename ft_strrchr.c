@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 22:04:04 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/29 17:02:46 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/26 15:47:27 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		slen--;
 	if (slen >= 0 && *(s + slen) == (unsigned char)c)
 		return ((char *)(s + slen));
-	return (0);
+	return (NULL);
 }
 
 // int	main()

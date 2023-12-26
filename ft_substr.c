@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:38:19 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/30 19:19:50 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/26 15:47:44 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = slen - start;
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
-		return (0);
+		return (NULL);
 	ft_memcpy(result, s + start, len);
 	result[len] = '\0';
 	return (result);

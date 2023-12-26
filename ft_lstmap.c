@@ -6,7 +6,7 @@
 /*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:00:35 by yidiliu           #+#    #+#             */
-/*   Updated: 2023/12/19 17:59:56 by yiliu            ###   ########.fr       */
+/*   Updated: 2023/12/26 15:44:45 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlist;
 
 	if (!lst || !f || !del)
-		return (0);
+		return (NULL);
 	newlist = ft_lstnew(f(lst->content));
 	if (!newlist)
-		return (0);
+		return (NULL);
 	lst = lst->next;
 	result = newlist;
 	while (lst)
@@ -30,7 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!(newlist->next))
 		{
 			ft_lstclear(&result, del);
-			return (0);
+			return (NULL);
 		}
 		lst = lst->next;
 		newlist = newlist->next;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidiliu <yidiliu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yiliu <yiliu@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 21:28:05 by yiliu             #+#    #+#             */
-/*   Updated: 2023/11/30 22:55:00 by yidiliu          ###   ########.fr       */
+/*   Updated: 2023/12/26 15:40:45 by yiliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*ft_strndup(char const *s, size_t n)
 	return (result);
 }
 
-static void	ft_write_words(char const *s, char c, char **result, size_t i)
+static int	ft_write_words(char const *s, char c, char **result, size_t i)
 {
 	size_t	wordlen;
 
@@ -66,10 +66,12 @@ static void	ft_write_words(char const *s, char c, char **result, size_t i)
 	result[i] = ft_strndup(s, wordlen);
 	if (!(result[i]))
 	{
-		while (--i > 0)
+		while (i-- > 0)
 			free(result[i]);
 		free(result);
+		return (0);
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -91,7 +93,8 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		wordlen = ft_wordlen(s, c);
-		ft_write_words(s, c, result, i);
+		if (ft_write_words(s, c, result, i) == 0)
+			return (NULL);
 		s += wordlen;
 		i++;
 	}
