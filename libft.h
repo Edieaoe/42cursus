@@ -19,9 +19,9 @@
 # include <stdio.h>
 # include <limits.h>
 
-#ifndef SIZE_MAX
-# define SIZE_MAX ULONG_MAX
-#endif
+# ifndef SIZE_MAX
+#  define SIZE_MAX ULONG_MAX
+# endif
 
 typedef struct s_list
 {
